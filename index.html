@@ -1,96 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tasty Bites Restaurant</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delicious Bites - Your go-to restaurant for pizza, burgers, and more. Order online or visit us!">
+    <meta name="keywords" content="restaurant, pizza, burgers, drinks, online ordering, WhatsApp orders">
+    <title>Delicious Bites - Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Delicious Bites</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-  <div class="logo">🍕 Tasty Bites</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#menu">Menu</a>
-    <a href="#order">Order</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Delicious Bites</h1>
+            <p>Fresh, delicious food made with love. Order now!</p>
+            <a href="#menu" class="cta-button">View Menu</a>
+        </div>
+    </section>
 
-<a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank">💬</a>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Delicious Bites, we serve mouth-watering pizzas, juicy burgers, and refreshing drinks. Our ingredients are fresh, and our service is top-notch. Come dine with us or order online!</p>
+        </div>
+    </section>
 
-<section id="home" class="hero">
-  <h1>Delicious Food, Fast Delivery</h1>
-  <p>Fresh pizzas, burgers & more — order now!</p>
-  <a href="#menu" class="btn">View Menu</a>
-</section>
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="categories">
+                <button class="category-btn active" data-category="pizza">Pizza</button>
+                <button class="category-btn" data-category="burgers">Burgers</button>
+                <button class="category-btn" data-category="drinks">Drinks</button>
+            </div>
+            <div class="menu-items">
+                <div class="menu-category active" id="pizza">
+                    <div class="item-card" data-id="1">
+                        <img src="https://via.placeholder.com/300x200?text=Margherita+Pizza" alt="Margherita Pizza">
+                        <h3 class="item-name">Margherita Pizza</h3>
+                        <p class="item-price">$12.99</p>
+                    </div>
+                    <div class="item-card" data-id="2">
+                        <img src="https://via.placeholder.com/300x200?text=Pepperoni+Pizza" alt="Pepperoni Pizza">
+                        <h3 class="item-name">Pepperoni Pizza</h3>
+                        <p class="item-price">$14.99</p>
+                    </div>
+                </div>
+                <div class="menu-category" id="burgers">
+                    <div class="item-card" data-id="3">
+                        <img src="https://via.placeholder.com/300x200?text=Cheeseburger" alt="Cheeseburger">
+                        <h3 class="item-name">Cheeseburger</h3>
+                        <p class="item-price">$9.99</p>
+                    </div>
+                    <div class="item-card" data-id="4">
+                        <img src="https://via.placeholder.com/300x200?text=Veggie+Burger" alt="Veggie Burger">
+                        <h3 class="item-name">Veggie Burger</h3>
+                        <p class="item-price">$10.99</p>
+                    </div>
+                </div>
+                <div class="menu-category" id="drinks">
+                    <div class="item-card" data-id="5">
+                        <img src="https://via.placeholder.com/300x200?text=Coke" alt="Coke">
+                        <h3 class="item-name">Coke</h3>
+                        <p class="item-price">$2.99</p>
+                    </div>
+                    <div class="item-card" data-id="6">
+                        <img src="https://via.placeholder.com/300x200?text=Orange+Juice" alt="Orange Juice">
+                        <h3 class="item-name">Orange Juice</h3>
+                        <p class="item-price">$3.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="menu" class="menu">
-  <h2>Our Menu</h2>
-  <button class="admin-btn" onclick="toggleAdmin()">Admin Edit Mode</button>
+    <section id="order" class="order">
+        <div class="container">
+            <h2>Order Online</h2>
+            <form id="order-form">
+                <input type="text" id="customer-name" placeholder="Your Name" required>
+                <input type="tel" id="customer-phone" placeholder="Phone Number" required>
+                <textarea id="customer-address" placeholder="Delivery Address" required></textarea>
+                <div id="order-summary"></div>
+                <button type="submit" class="cta-button">Place Order via WhatsApp</button>
+            </form>
+        </div>
+    </section>
 
-  <div class="menu-grid">
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Address:</strong> 123 Main St, City, State 12345</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> info@deliciousbites.com</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.419415484681!3d37.774929779759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064b5b3b3b3%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1633020000000!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
 
-    <div class="card">
-      <img src="images/pizza.jpg" alt="Pizza">
-      <h3>Pepperoni Pizza</h3>
-      <p>$12.99</p>
-      <button onclick="addToOrder('Pepperoni Pizza', 12.99)">Add</button>
-    </div>
-
-    <div class="card">
-      <img src="images/burger.jpg" alt="Burger">
-      <h3>Cheese Burger</h3>
-      <p>$8.99</p>
-      <button onclick="addToOrder('Cheese Burger', 8.99)">Add</button>
-    </div>
-
-    <div class="card">
-      <img src="images/pasta.jpg" alt="Pasta">
-      <h3>Creamy Pasta</h3>
-      <p>$10.99</p>
-      <button onclick="addToOrder('Creamy Pasta', 10.99)">Add</button>
-    </div>
-
-    <div class="card">
-      <img src="images/fries.jpg" alt="Fries">
-      <h3>French Fries</h3>
-      <p>$4.99</p>
-      <button onclick="addToOrder('French Fries', 4.99)">Add</button>
-    </div>
-
-  </div>
-</section>
-
-<section id="order" class="order">
-  <h2>Online Order</h2>
-  <form id="orderForm">
-    <input type="text" id="custName" placeholder="Your Name" required>
-    <input type="text" id="custPhone" placeholder="Phone Number" required>
-    <textarea id="custAddress" placeholder="Delivery Address" required></textarea>
-    <textarea id="orderItems" placeholder="Your Order Items" readonly></textarea>
-    <button type="submit">Place Order</button>
-  </form>
-</section>
-
-<section id="about" class="about">
-  <h2>About Us</h2>
-  <p>We serve fresh, tasty food with fast delivery and great service.</p>
-</section>
-
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>📍 123 Main Street</p>
-  <p>📞 +1 234 567 8900</p>
-  <p>📧 info@tastybites.com</p>
-</section>
-
-<footer>
-  <p>© 2025 Tasty Bites Restaurant</p>
-</footer>
-
-<script src="script.js"></script>
+    <footer>
+        <p>&copy; 2023 Delicious Bites. All rights reserved.</p>
+        <button id="admin-toggle">Admin Edit</button>
+    </footer>
 </body>
 </html>
